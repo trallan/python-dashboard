@@ -11,17 +11,22 @@
 <div class="bg-[#26314b] rounded-sm text-white w-full p-10 my-8">
     <table>
         <thead>
-            {% for data in headers %}
-                <th>{{ data }}</th>
+            {% for header in headers %}
+                {% if header != "comment" %}
+                <th>{{ header|capitalize }}</th>
+                {% endif %}
             {% endfor %}
         </thead>
         <tbody>
-            <tr>
-                <td>Some test 1</td>
-                <td class="text-[#46C2FF]">Random text</td>
-                <td>Data random</td>
-                <td>True</td>
-            </tr>
+            {% for row in data %}
+                <tr>
+                    {% for header in headers %}
+                        {% if header != "comment" %}
+                            <td>{{ row[header] }}</td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>

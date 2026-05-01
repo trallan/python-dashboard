@@ -17,7 +17,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="h-14 bg-[#ffffff] text-black shadow-lg">
+    <nav class="fixed z-50 w-full h-14 bg-[#ffffff] text-black shadow-lg">
         {% include "partials/navbar.html" %}
     </nav>
 
@@ -28,16 +28,16 @@
             {% include "partials/sidebar.html" %}
         </aside>
 
-        <main class="flex-1 ml-64 p-6">
+        <main class="flex-1 ml-64 p-6 pt-28">
             {% block content %}{% endblock %}
         </main>
 
     </div>
 
     <!-- Footer -->
-    <footer class="absolute flex justify-center text-xs bg-white bottom-0 h-4 w-screen">
+    <!-- <footer class="absolute flex justify-center text-xs bg-white bottom-0 h-4 w-screen">
         <p>© 2026</p>
-    </footer>
+    </footer> -->
 
     {% block scripts %}{% endblock %}
 </body>
