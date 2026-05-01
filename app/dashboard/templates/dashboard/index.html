@@ -3,6 +3,26 @@
 {% block title %}Dashboard Home{% endblock %}
 
 {% block content %}
-<h2>Welcome to your dashboard</h2>
-<p>This is the dashboard page.</p>
+<div class="bg-[#26314b] rounded-sm text-white w-full p-10">
+    <h2>Welcome to your dashboard</h2>
+    <p>This is the dashboard page.</p>
+</div>
+
+<div class="bg-[#26314b] rounded-sm text-white w-full p-10 my-8">
+    <table>
+        <thead>
+            {% for data in headers %}
+                <th>{{ data }}</th>
+            {% endfor %}
+        </thead>
+        <tbody>
+            <tr>
+                <td>Some test 1</td>
+                <td class="text-[#46C2FF]">Random text</td>
+                <td>Data random</td>
+                <td>True</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 {% endblock %}
