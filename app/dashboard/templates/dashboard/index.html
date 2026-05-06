@@ -22,7 +22,12 @@
                 <tr>
                     {% for header in headers %}
                         {% if header != "comment" %}
-                            <td>{{ row[header] }}</td>
+                            <td class="
+                                {% if header == 'provider' %}text-[#46C2FF]{% endif %}
+                                {% if header == 'total_searches' %}text-[#46C2FF]{% endif %}
+                            ">
+                                {{ row[header] }}
+                            </td>
                         {% endif %}
                     {% endfor %}
                 </tr>
